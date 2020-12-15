@@ -7,5 +7,5 @@ div {
     border-bottom: 1px black solid;
 }
 div:last-child {
-    border-right:1px black solid;
+    border-right: 1px black solid;
 }

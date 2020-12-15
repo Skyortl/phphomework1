@@ -12,14 +12,20 @@ $colors = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
 '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
 $usedColors = [];
 const ARR_SIZE = 4;
-while(true) {
-    if(count($usedColors) >= ARR_SIZE)
-        break;
-    $randomIndex = rand(0, count($colors) - 1);
-    $color = $colors[$randomIndex];
-    if (!in_array($color, $usedColors)) {
-        $usedColors[] = $color;
-        echo "<div style=\"background-color: $color;\"></div>";
+if(ARR_SIZE > count($colors))
+    echo "ERROR";
+else
+{
+    while(true) {
+        if(count($usedColors) >= ARR_SIZE)
+            break;
+        $randomIndex = rand(0, count($colors) - 1);
+        $color = $colors[$randomIndex];
+        if (!in_array($color, $usedColors)) {
+            $usedColors[] = $color;
+            echo "<div style=\"background-color: $color;\"></div>";
+        }
     }
 }
+
 ?>
